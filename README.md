@@ -142,11 +142,11 @@ flowchart LR
     eng --> eff
     main --> likes
     likes --> tnt
-    tnt -- RCON --> plug
-    eff -- RCON --> plug
+    tnt -->|RCON| plug
+    eff -->|RCON| plug
     plug --> world
-    plug -. stats.yml .-> dash[Dashboard :5010]
-    plug -. stats.yml .-> ovl[Overlay :5011]
+    plug -.->|stats.yml| dash[Dashboard :5010]
+    plug -.->|stats.yml| ovl[Overlay :5011]
 ```
 
 **Roller:**
