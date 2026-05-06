@@ -1,0 +1,33 @@
+{
+  "arena": {
+    "inner_min": { "x": 0, "y": 51, "z": 0 },
+    "inner_max": { "x": 15, "y": 65, "z": 15 },
+    "size": { "x": 16, "y": 15, "z": 16 },
+    "total_blocks": 3840,
+    "wall_material": "minecraft:glass",
+    "spawn_top_offset": 5,
+    "tiers": [
+      { "name": "iron",    "y_min": 51, "y_max": 55, "block": "minecraft:iron_block" },
+      { "name": "gold",    "y_min": 56, "y_max": 60, "block": "minecraft:gold_block" },
+      { "name": "diamond", "y_min": 61, "y_max": 65, "block": "minecraft:diamond_block" }
+    ]
+  },
+  "rcon": {
+    "host": "127.0.0.1",
+    "port": 25575,
+    "password": "tiktokbox123"
+  },
+  "tiktok": {
+    "username": "your_username"
+  },
+  "likes": {
+    "thresholds": [
+      { "at": 1000,  "tnt": 10  },
+      { "at": 5000,  "tnt": 20  },
+      { "at": 10000, "tnt": 50  },
+      { "at": 20000, "tnt": 100 }
+    ],
+    "post_interval": 50000,
+    "post_count": 100
+  }
+}

@@ -1,0 +1,15 @@
+name: TikTokBox
+version: ${project.version}
+main: com.kenfroz.tiktokbox.TikTokBoxPlugin
+api-version: "1.21"
+authors: [kenfroz]
+description: TikTok Live chat/gift driven TNT arena for Minecraft.
+commands:
+  arena:
+    description: TikTok Box arena kontrolleri
+    usage: /arena <reset|status|start|stop|tnt>
+    permission: tiktokbox.admin
+permissions:
+  tiktokbox.admin:
+    default: op
+    description: Arena yonetimi

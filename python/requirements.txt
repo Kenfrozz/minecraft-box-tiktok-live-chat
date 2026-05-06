@@ -1,0 +1,4 @@
+TikTokLive>=6.4.0
+mcrcon>=0.7.0
+Flask>=3.0.0
+PyYAML>=6.0

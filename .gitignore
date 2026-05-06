@@ -1,0 +1,96 @@
+# ============================================================
+# TikTok Box - .gitignore
+# ============================================================
+
+# === Java / Maven build ===
+plugin/target/
+*.class
+*.jar
+
+# Allow the compiled plugin jar in /server/plugins ONLY if you
+# intentionally want to ship it; default = ignore.
+server/plugins/*.jar
+
+# === Python ===
+python/venv/
+python/__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.python-version
+
+# === Runtime state / logs / caches ===
+python/state.json
+server/.console_history
+server/logs/
+server/cache/
+server/libraries/
+server/versions/
+server/world/
+server/world_nether/
+server/world_the_end/
+
+# === Server identity / player data (privacy) ===
+server/ops.json
+server/whitelist.json
+server/usercache.json
+server/banned-ips.json
+server/banned-players.json
+server/permissions.yml.bak
+
+# === Plugin runtime data ===
+# auto-extracted from bundled jar — do not commit deployed copy
+server/plugins/TikTokBox/stats.yml
+server/plugins/TikTokBox/config.yml
+server/plugins/.paper-remapped/
+server/plugins/bStats/
+# third-party profiler plugin (kullanici kendi indirsin)
+server/plugins/spark/
+
+# === Paper auto-generated server configs ===
+# mojang eula kabulu (user-specific)
+server/eula.txt
+server/version_history.json
+server/bukkit.yml
+server/spigot.yml
+server/commands.yml
+server/help.yml
+server/permissions.yml
+server/config/paper-global.yml
+server/config/paper-world-defaults.yml
+
+# === Bundled tools (kullanici kendi indirsin) ===
+tools/apache-maven-*/
+
+# === Server binary ===
+server/paper.jar
+
+# === Secrets / env ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.keystore
+
+# === IDE ===
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+
+# === OS ===
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# === Misc ===
+*.log
+*.tmp
+*.bak
+*.swp

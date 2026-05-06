@@ -1,0 +1,75 @@
+# TikTok Box Arena konfigurasyonu
+arena:
+  world: "world"
+  inner_min: { x: 0, y: 51, z: 0 }
+  inner_max: { x: 15, y: 65, z: 15 }
+  wall_material: GLASS
+  # Oyuncu arena icine hangi blogu koyarsa koysun, plugin BlockPlaceEvent ile
+  # otomatik olarak kademe materyaline cevirir.
+  auto_convert_placed: true
+  tiers:
+    - { name: "iron",    y_min: 51, y_max: 55, block: IRON_BLOCK }
+    - { name: "gold",    y_min: 56, y_max: 60, block: GOLD_BLOCK }
+    - { name: "diamond", y_min: 61, y_max: 65, block: DIAMOND_BLOCK }
+
+tnt:
+  # Python RCON tarafi /summon tnt <x> <y> <z> {Tags:["box_<tier>"]} gonderir.
+  # Plugin ExplosionPrimeEvent'te patlama yaricapini burada tanimlanan degerlerle override eder.
+  tiers:
+    normal:  { power: 4.0,  fire: false }
+    mega:    { power: 7.0,  fire: false }
+    rain:    { power: 3.0,  fire: false }
+    nuke:    { power: 12.0, fire: true  }
+    meteor:  { power: 3.5,  fire: true  }
+  # Creeper tier: TNT patlayinca N creeper spawn, walk_ticks sonra ignite.
+  creeper:
+    count: 6
+    walk_ticks: 60
+
+player:
+  block_reach: 9.0
+  entity_reach: 6.0
+  # Blok kirma/mineral hizi (default 1.0). Haste effect ile birlesir.
+  block_break_speed: 10.0
+  mining_efficiency: 10.0
+  # PlayerJoinEvent'te oyuncuya uygulanan kalici haste level (etki-suresi = "sonsuz")
+  haste_amplifier: 8
+  # Fast Place: oyuncu arenaya 1 blok koyunca cevresindeki NxN alani (ayni Y katmaninda)
+  # otomatik tier materyaliyle doldurur. 0=kapali, 1=3x3 (9 blok), 2=5x5 (25 blok), 3=7x7 (49 blok).
+  fast_place_radius: 0
+
+countdown:
+  # Arena %100 dolunca zafer geri sayimi saniye cinsinden
+  win_seconds: 10
+
+monitor:
+  # Arena tarama sikligi (tick; 20 tick = 1 saniye)
+  scan_interval_ticks: 10
+
+bot:
+  # Server acildiginda yardimci bot otomatik spawn olur mu?
+  auto_start: true
+  # Varsayilan karakter (enderman, villager, iron_golem, ...)
+  default_type: enderman
+  # Saniyede kac blok koysun (1-20)
+  default_bps: 2
+  # Varsayilan isim. Hediye geldiginde gonderenin ismi ile degistirilir.
+  default_name: "Usta"
+  # Botun etrafindaki glow cercevesi
+  glowing: false
+
+penalty:
+  # Hapis hucresi: 3x3 bedrock kutu, y gokte olsun ki goze carpmasin.
+  prison:
+    x: 50
+    y: 200
+    z: 50
+    duration_ticks: 200       # 10 sn
+  # Canavarlara yem arenasi: size x size bedrock duvarli tas zemin, 6 blok yukseklik.
+  gauntlet:
+    x: 100
+    y: 80
+    z: 100
+    size: 14                  # 14x14 zemin
+    duration_ticks: 600       # 30 sn
+    mob_count: 4              # zombi sayisi

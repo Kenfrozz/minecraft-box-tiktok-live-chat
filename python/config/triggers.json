@@ -1,0 +1,55 @@
+{
+  "keywords": {
+    "tnt":    { "action": "tnt", "tier": "normal", "cooldown_per_user_sec": 3,  "global_cooldown_sec": 0.5 },
+    "bomba":  { "action": "tnt", "tier": "normal", "cooldown_per_user_sec": 3,  "global_cooldown_sec": 0.5 },
+    "patlat": { "action": "tnt", "tier": "normal", "cooldown_per_user_sec": 3,  "global_cooldown_sec": 0.5 },
+    "mega":   { "action": "tnt", "tier": "mega",   "cooldown_per_user_sec": 15, "global_cooldown_sec": 2.0 },
+    "yagmur": { "action": "tnt", "tier": "rain",   "cooldown_per_user_sec": 30, "global_cooldown_sec": 5.0 },
+    "nuke":   { "action": "tnt", "tier": "nuke",   "cooldown_per_user_sec": 60, "global_cooldown_sec": 10.0 },
+    "creeper":{ "action": "tnt", "tier": "creeper","cooldown_per_user_sec": 20, "global_cooldown_sec": 3.0 },
+    "cripper":{ "action": "tnt", "tier": "creeper","cooldown_per_user_sec": 20, "global_cooldown_sec": 3.0 },
+    "meteor": { "action": "tnt", "tier": "meteor", "cooldown_per_user_sec": 120,"global_cooldown_sec": 20.0 },
+
+    "kor":      { "action": "effect", "name": "blindness",  "cooldown_per_user_sec": 45, "global_cooldown_sec": 8  },
+    "bulanti":  { "action": "effect", "name": "nausea",     "cooldown_per_user_sec": 45, "global_cooldown_sec": 8  },
+    "sarhos":   { "action": "effect", "name": "nausea",     "cooldown_per_user_sec": 45, "global_cooldown_sec": 8  },
+    "yavas":    { "action": "effect", "name": "slowness",   "cooldown_per_user_sec": 45, "global_cooldown_sec": 8  },
+    "ucus":     { "action": "effect", "name": "levitation", "cooldown_per_user_sec": 90, "global_cooldown_sec": 20 },
+    "levitate": { "action": "effect", "name": "levitation", "cooldown_per_user_sec": 90, "global_cooldown_sec": 20 },
+    "ters":     { "action": "effect", "name": "darkness",   "cooldown_per_user_sec": 60, "global_cooldown_sec": 15 },
+    "hiz":      { "action": "effect", "name": "speed",      "cooldown_per_user_sec": 60, "global_cooldown_sec": 15 }
+  },
+  "gifts": {
+    "by_name": {
+      "Rose":            { "action": "tnt", "tier": "normal" },
+      "Finger Heart":    { "action": "tnt", "tier": "normal" },
+      "GG":              { "action": "tnt", "tier": "mega" },
+      "Ice Cream Cone":  { "action": "tnt", "tier": "mega" },
+      "Perfume":         { "action": "tnt", "tier": "rain" },
+      "Doughnut":        { "action": "tnt", "tier": "rain" },
+      "Rosa":            { "action": "effect", "name": "darkness" },
+      "Galaxy":          { "action": "effect", "name": "combo_nuke" },
+      "Lion":            { "action": "tnt", "tier": "nuke" },
+      "TikTok Universe": { "action": "effect", "name": "wipe" },
+      "Gaming Keyboard": { "action": "tnt", "tier": "creeper" },
+      "Train":           { "action": "tnt", "tier": "meteor" },
+      "Sports Car":      { "action": "effect", "name": "wipe" }
+    },
+    "by_diamond_count": [
+      { "min": 1,     "max": 4,       "action": "tnt",    "tier": "normal" },
+      { "min": 5,     "max": 19,      "action": "effect", "name": "blindness" },
+      { "min": 20,    "max": 99,      "action": "tnt",    "tier": "mega" },
+      { "min": 100,   "max": 299,     "action": "tnt",    "tier": "rain" },
+      { "min": 300,   "max": 499,     "action": "effect", "name": "mega_sabotaj" },
+      { "min": 500,   "max": 799,     "action": "tnt",    "tier": "nuke" },
+      { "min": 800,   "max": 1499,    "action": "tnt",    "tier": "meteor" },
+      { "min": 1500,  "max": 2499,    "action": "effect", "name": "jail" },
+      { "min": 2500,  "max": 4999,    "action": "effect", "name": "gauntlet" },
+      { "min": 5000,  "max": 9999999, "action": "effect", "name": "wipe" }
+    ]
+  },
+  "rate_limits": {
+    "global_tnt_per_sec": 5,
+    "max_queue": 200
+  }
+}
